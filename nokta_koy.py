@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Sonsuz Nokta Koyma Makinesi
+# Sonsuz Nokta Koyma Makinesi - Turbo Versiyon
 # Ciddi bir iştir. Lütfen saygı gösterin.
 
 import time
@@ -20,10 +20,11 @@ def nokta_koy(sonsuz=True):
         "Nokta koyma işlemi devam ediyor.",
         "Dikkat: Nokta yoğunluğu artıyor.",
         "Nokta!",
-        "... (bu da bir nokta)"
+        "... (bu da bir nokta)",
+        "Turbo nokta!"
     ]
     
-    print("Nokta Koyma Makinesi başlatıldı. Durdurmak için Ctrl+C (ama yapmayın).")
+    print("Nokta Koyma Makinesi TURBO başlatıldı. Durdurmak için Ctrl+C (ama yapmayın).")
     print("-" * 50)
     
     try:
@@ -31,19 +32,19 @@ def nokta_koy(sonsuz=True):
             print(".", end="", flush=True)
             sayac += 1
             
-            # Her 10 noktada bir ciddi mesaj
-            if sayac % 10 == 0:
+            # Her 5 noktada bir ciddi mesaj (daha fazla)
+            if sayac % 5 == 0:
                 print(f"  [{sayac}] {random.choice(mesajlar)}")
             
-            # Her 50'de bir abartılı rapor
-            if sayac % 50 == 0:
+            # Her 25'de bir abartılı rapor
+            if sayac % 25 == 0:
                 print(f"\n\n*** RESMİ RAPOR: {sayac} nokta koyuldu. Dünya biraz daha kurtuldu. ***\n")
             
-            time.sleep(0.1)  # Noktaların hazırlanması için
+            time.sleep(0.05)  # Daha hızlı noktalar
             
             # Gizli kontrol (asla çalışmaz)
             if sayac > 999999999 and random.random() < 0.0000001:
-                print("\n\u00d6zgürlük noktası bulundu!")
+                print("\nÖzgürlük noktası bulundu!")
                 break
                 
     except KeyboardInterrupt:
